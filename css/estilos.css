@@ -23,11 +23,7 @@ etiqueda de class = .
 
 #header{
     height: 145px;
-<<<<<<< HEAD
     background-color: cyan;
-=======
-    background-color: blue;
->>>>>>> 09ff639eb202807da41f322593fb755929fe2987
 }
 #logo{
     padding: 20px;
@@ -43,19 +39,15 @@ etiqueda de class = .
 
 
 body{
-<<<<<<< HEAD
     background-color: purple;
-=======
-    background-color: lightblue;
 }
 
 #menu{
     clear: both;
-    background: #d9baee;
+    background: #222;
     color: white;
     height: 55px;
-    border-bottom: 4px solid #01b1ea;
-
+    border-bottom: 4px solid #5a01ea;
 }
 
 #menu ul{
@@ -63,19 +55,17 @@ body{
     text-decoration: none;
     margin: 0px auto;
     margin-left: 25px;
-    
 }
 
 #menu ul li{
     line-height: 55px;
     float: left;
-    border-right: 1px solid#363636;
-
+    border-right: 1px solid #363636;
 }
 
 #menu a{
     display: block;
-    color:black;
+    color: white;
     text-decoration: none;
     padding-left: 12px;
     padding-right: 12px;
@@ -83,6 +73,41 @@ body{
 }
 
 #menu a:hover{
-    background: #6000a0;
->>>>>>> 09ff639eb202807da41f322593fb755929fe2987
+    background: #5a01ea;
+}
+#content{
+    margin: 0px auto;
+    overflow: hidden;
+    background: white;
+}
+
+#lateral{
+    width: 30%;
+    min-height: 500px;
+    float: left;
+    border: 1px solid black;
+}
+
+#lateral .block_aside{
+    display: block;
+    width: 90%;
+    margin: 5px auto;
+    padding: 10px;
+    border: 2px solid purple;
+
+}
+
+#lateral h3{
+    display: block;
+    color: rebeccapurple;
+    width: 100%;
+    text-align: center;
+    padding-top: 2px;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+    font-size: 16px;
+    font-weight: bold;
+    background: red;
+    border: 2px solid pink;
+    
 }
