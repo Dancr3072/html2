@@ -111,3 +111,34 @@ body{
     border: 2px solid pink;
     
 }
+
+input["text"],
+input["password"],
+input["email"]{
+        display: block;
+    width: 95%;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    border: 1px solid red;
+    box-shadow: 0px 0px 2px pink incert;
+    backgroud: white;
+    padding: 2px;
+    color: grey;
+    transition: all 300ms;
+}
+    
+input["text"],
+input["password"],
+input["email"]{
+    
+}
+
+#footer{
+    clear: both;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 5px;
+    background: purple;
+    color: whitesmoke;
+    border-top: 5px solid pink;
+}
