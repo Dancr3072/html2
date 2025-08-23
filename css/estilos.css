@@ -21,6 +21,11 @@ etiqueda de class = .
     background: white;
 }
 
+img{
+    height: 50px;
+    width: 100px;
+}
+
 #header{
     height: 145px;
     background-color: cyan;
@@ -32,11 +37,8 @@ etiqueda de class = .
 }
 #logo img{
     float: left;
-    height: 100px;
+    height: 80px;
 }
-
-
-
 
 body{
     background-color: purple;
@@ -82,10 +84,10 @@ body{
 }
 
 #lateral{
-    width: 30%;
+    width: 20%;
     min-height: 500px;
     float: left;
-    border: 1px solid black;
+    border: 1px solid rgb(255, 255, 255);
 }
 
 #lateral .block_aside{
@@ -108,8 +110,7 @@ body{
     font-size: 16px;
     font-weight: bold;
     background: red;
-    border: 2px solid pink;
-    
+        
 }
 
 input[type="text"],
@@ -135,18 +136,25 @@ input[type="email"]:focus{
 }
 
 input[type="submit"],
-input[type="button"]{
+input[type="button"],
+.button{
+
     display: block;
     border-radius: 2px;
     padding: 5px;
     padding-left: 10px;
     padding-right: 10px;
-    background-color: #2979cd ;
+    background-color: #cd29b7 ;
     color: white;
-    border: 1px solid #11608e;
+    border: 1px solid #000000;
     cursor: pointer;
 }
 
+.button{
+    background: #c9c9c9;
+    color: white !important;
+    text-decoration: none;
+}
 
 #footer{
     clear: both;
@@ -156,4 +164,59 @@ input[type="button"]{
     background: purple;
     color: whitesmoke;
     border-top: 5px solid pink;
+}
+#central{
+    width: 70%;
+    min-height: 500px;
+    float: right;
+    border-left: 1px solid black;
+    box-shadow: -5px -1px 5px black;
+    padding: 25px;
+
+}
+#central h1{
+    font-size: 24px;
+    font-weight: normal;
+    letter-spacing: 1px;
+    text-align: center;
+    border-bottom: 1px solid palevioletred;
+    margin-bottom: 20px;
+    padding: 20%;
+    padding-top: 0px;
+}
+
+.product{
+    width: 30%;
+    border: 1px solid black;
+    float: left;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.product img{
+    height: 150px;
+    margin-bottom: 10px;
+}
+
+.product h2{
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.product p{
+    font-weight: bold;
+    counter-reset: grey;
+    margin-bottom: 10px;
+}
+
+.product a{
+    color: rgb(162, 0, 255);
+    text-decoration: none;
+    padding-bottom: 10px;
+}
+
+.product a:hover{
+    color: #cd29b7 !important;
 }
