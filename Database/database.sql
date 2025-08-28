@@ -17,4 +17,36 @@ CREATE TABLE IF NOT EXISTS USUARIOS(
 
 INSERT INTO USUARIOS VALUES(NULL, 'ADMIN', 'ADMIN', 'ADMIN@ADMIN.COM', '12345', 'ADMIM', 'IMAGEN');
 
+CREATE TABLE IF NOT EXISTS t_categorias(
+    id_categoria INT(11) AUTO_INCREMENT NOT NULL,
+    nombre_categoria VARCHAR(100)NOT NULL,
+    CONSTRAINT pk_categoria PRIMARY KEY(id_categoria)
+)ENGINE=InnoDb;
+
+INSERT INTO t_categorias VALUES(NULL,'Construccion'),(NULL,'Electricos'),(NULL,'pisos');
+
+CREATE TABLE IF NOT EXISTS t_productos(
+    id_producto INT(11) AUTO_INCREMENT NOT NULL,
+    nombre_producto VARCHAR(100) NOT NULL,
+    precio float(100,2) NOT NULL,
+    stock INT(100) NOT NULL,
+    oferta VARCHAR(50) NOT NULL,
+    fecha date not NULL,
+    imagen VARCHAR(255) NOT NULL,
+    id_categoria INT(11) NOT NULL,
+    CONSTRAINT pk_producto PRIMARY KEY(id_producto),
+    CONSTRAINT fk_producto_categoria FOREIGN KEY(id_categoria) REFERENCES t_categorias(id_categoria) 
+)ENGINE=InnoDb; 
+
+INSERT INTO t_productos VALUES(NULL,'cemento','25000','10','','310725','','1'),(NULL,'tomacorriente','2000','10','','060525','','2'),(NULL,'baldosa','30000','10','','110325','','1');
+
+CREATE TABLE IF NOT EXISTS t_pedidos(
+    id_pedido INT(11) AUTO_INCREMENT NOT NULL,
+    id_producto INT(11) NOT NULL,
+    cantidad INT(100) NOT NULL,
+    ID_USUARIO INT(11) NOT NULL,
+    CONSTRAINT pk_pedido PRIMARY KEY(id_pedido),
+    CONSTRAINT fk_pedido_producto FOREIGN KEY(id_producto) REFERENCES t_productos(id_producto),
+    CONSTRAINT fk_pedido_usuario FOREIGN KEY(ID_USUARIO) REFERENCES USUARIOS(ID_USUARIO)
+) ENGINE=InnoDb; 
 
